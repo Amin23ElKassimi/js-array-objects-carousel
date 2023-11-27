@@ -27,7 +27,7 @@ const imagesList = [
     { name : 'ratchet', foto: '02'},
     { name : 'avatars', foto: '03'},
     { name : 'Acat', foto: '04'},
-    { name : 'avengers', oto: '05'},
+    { name : 'avengers', foto: '05'},
 ];
 
 // Element DOM Main Slide
@@ -39,7 +39,7 @@ imagesList.forEach((element,) => {
     newImageElement.src = `./img/${element.foto}.webp`;
     mainSlide.appendChild(newImageElement);
 });
-
+console.log(imagesList);
 
 const nextButton = document.querySelector('next');
 
