@@ -39,13 +39,54 @@ imagesList.forEach((element,) => {
     newImageElement.src = `./img/${element.foto}.webp`;
     mainSlide.appendChild(newImageElement);
 });
-console.log(imagesList);
-
-const nextButton = document.querySelector('next');
-
-const prevButton = document.querySelector('prev');
 
 
+
+let activeIndex = 0;
+const imageElements = document.querySelectorAll('img');
+
+// Aggiungi la classe active al primo delemento  della lista
+imageElements[activeIndex].classList.add('active');
+console.log(imageElements[activeIndex]);
+
+
+const nextButton = document.querySelector('#next');
+nextButton.addEventListener('click', function(){
+
+    // # togliere active a chi ce l'ha
+    imageElements[activeIndex].classList.remove('active');
+    
+    // % aggiungo uno all'activeIndex
+    // activeIndex++
+    if (activeIndex === (imagesList.length - 1)){
+        activeIndex =  0;
+        console.log('switch');
+    }
+    else  {
+        activeIndex = activeIndex + 1;
+    }
+
+    // % aggiungo la classe active al nuovo elemento con activeIndex
+    imageElements[activeIndex].classList.add('active');
+});
+
+
+const prevButton = document.querySelector('#prev');
+prevButton.addEventListener('click', function(){
+
+    imageElements[activeIndex].classList.remove('active');
+
+    // ? decremento active index
+    if (activeIndex === 0){
+        activeIndex =  (imagesList.length - 1);
+        console.log('switch rewerse');
+    }
+    else  {
+        activeIndex = activeIndex - 1;
+    }
+
+    imageElements[activeIndex].classList.add('active');
+});
 
 
 
