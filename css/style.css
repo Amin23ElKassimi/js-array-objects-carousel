@@ -1,24 +1,38 @@
 
-img{
-    height: 300px;
+#mainSlide img{
+    height: 100%;
     width: 100%;
     object-fit: cover;
     display: none;
+    object-position: right;
 }
 
-
-
-img.active{
+#mainSlide img.active{
     display: inline-block;
 }
 
+#list img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
 
 
+#carosel{
+    height: 700px;
+    background-color: beige;
+}
+
+#carosel .col-8{
+    height: 100%;
+}
+    
+#list{
+    height: 100%;
+}
 
 
-
-
-
-
-
+#list img{
+    height: calc(100% / 5);
+}
 

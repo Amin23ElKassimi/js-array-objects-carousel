@@ -23,17 +23,27 @@
 
 // Array
 const imagesList = [
-    { name : 'spiderman', foto: '01'},
-    { name : 'ratchet', foto: '02'},
-    { name : 'avatars', foto: '03'},
-    { name : 'Acat', foto: '04'},
-    { name : 'avengers', foto: '05'},
+    { title : 'Spiderman Morales',
+     description : 'Experience the rise of Miles Morales as the new hero masters incredible, explosive new powers to become his own Spider-Man.',
+     foto : '01'},
+    { title : 'Ratchet & Clank',
+      description : 'Blast your way through an interdimensional adventure. Go dimension-hopping with Ratchet and Clank as they take on an evil emperor from another reality',
+      foto: '02'},
+    { title : 'avatars',
+      description : 'Experience the rise of Miles Morales as the new hero masters incredible, explosive new powers to become his own Spider-Man.',
+      foto: '03'},
+    { title : 'Fortnite',
+      description : 'Create, play, and battle with friends for free in Fortnite.',
+      foto: '04'},
+    { title : 'avengers',
+      description : 'Live out your Super Hero dreams in an epic action-adventure',
+      foto: '05'},
 ];
 
 // Element DOM Main Slide
 const mainSlide = document.querySelector('#mainSlide');
 
-// ? popoliamo l'html dinamicamente e appendaimo al DOM
+// popoliamo l'html dinamicamente e appendaimo al DOM
 imagesList.forEach((element,) => {
     const newImageElement = document.createElement('img');
     newImageElement.src = `./img/${element.foto}.webp`;
@@ -41,7 +51,7 @@ imagesList.forEach((element,) => {
 });
 
 
-
+// POINTER
 let activeIndex = 0;
 const imageElements = document.querySelectorAll('img');
 
