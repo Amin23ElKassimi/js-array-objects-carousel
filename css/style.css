@@ -1,30 +1,101 @@
+body{
+    font-family: "Montserrat", sans-serif;
+}
 
-img{
-    height: 200px;
+div.my-carousel-container{
+    min-height: 540px;
+    min-width: 800px ;
+    max-width: 1350px;
+    margin: 0 auto;
+    /* background-color: aquamarine; */
+}
+
+div.my-carousel-images{
+    /* background-color: cadetblue; */
+    height: 540px;
+    border: 1px solid;
+    width: 80%;
+}
+
+div.my-thumbnails{
+    /* background-color: violet; */
+    height: 160px;
+    border: 1px solid;
+}
+
+div.my-previous,
+div.my-next{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, .5);
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+div.my-previous{
+    left: 1rem;
+}
+
+div.my-next{
+    right: 1rem;
+}
+
+
+div.my-carousel-item{
+    display: none;
+}
+
+div.my-carousel-item.active{
+    display: block;
+}
+
+div.my-carousel-item{
+    height: 100%;
+    position: relative;
+    display: none;
+}
+
+div.my-carousel-item img{
+    height: 100%;
     width: 100%;
     object-fit: cover;
 }
 
-#main-slide {
-    width: 60%;
-    background-color: gray;
+div.item-description{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: white;
+    text-align: end;
+    text-shadow: 2px 2px 2px black;
 }
 
-#list-slide {
-    width: 40%;
-    background-color: blue;
+
+div#my-carousel .my-thumbnails{
+    width: 20%;
+    height: 540px;
+    display: flex;
+    overflow-x: auto;
+    position: relative;
+    flex-direction: column;
 }
 
+div#my-carousel .my-thumbnails .my-thumbnail-item{
+    filter: brightness(.4);
+    height: calc(100% / 5);
+}
 
+div#my-carousel .my-thumbnails .my-thumbnail-item img{
+    height: 100%;
+    width: 100%;
+}
 
-
-
-
-
-
-
-
-
-
-
+div#my-carousel .my-thumbnails .my-thumbnail-item.active{
+    filter:brightness(1);
+    border: 3px rgb(197, 197, 197) solid;
+}
 
